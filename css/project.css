@@ -1,0 +1,83 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+    background-color: #333;
+}
+input {
+    color: #fff;
+    background-color: #333;
+}
+span {
+    color: #fff;
+} */
+
+button {
+    /* margin-top: 5px; */
+    padding-left: 10.5px;
+    padding-right: 10.5px;
+    height: 27px;
+    border-radius: 13.5px;
+    /* background-color: #333; */
+}
+/* button:hover {
+    color: #333;
+} */
+#brakeBut, #attentionBrakeBut {
+    margin-top: 5px;
+}
+
+.screen-out {
+    width: calc(100% - 18px - 6px);
+    padding: 6px;
+    border-radius: 18px;
+    background-color: #000;
+    border: #333 6px solid;
+}
+.screen-in {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+.output {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+.output .line {
+    margin-top: 8px;
+    height: 12px;
+    white-space: nowrap;
+    font-size: 0;
+}
+.output .line div {
+    margin-left: 8px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    /* box-sizing: border-box; */
+    /* white-space: normal; */
+    /* word-wrap: break-word; */
+    /* word-break: break-all; */
+    /* overflow: hidden; */
+}
+.output .line:nth-child(1) {
+    margin-top: 0;
+}
+.output .line div:first-child {
+    margin-left: 0;
+}
+.line .off-red {
+    background-color: #ff000020;
+}
+.line .on-red {
+    background-color: #ff0000;
+}
+.line .off-yellow {
+    background-color: #ffff0020;
+}
+.line .on-yellow {
+    background-color: #ffff00;
+}
