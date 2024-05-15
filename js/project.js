@@ -365,68 +365,68 @@ function printTail() {
     var tailHTML = "";
     // 每行
     for(var i = 0; i < 16; i++) {
-        var lineHTML = "";
+        var tailHTMLLine = "";
         // 每列
         for(var j = 0; j < 72; j++) {
             if(j >=0 && j < 24) {
                 if(ifLeft == 1 && i >= 2 && i < 8 && j >= 4 && j < 20 && half_arrow[i - 2][j - 4] == 1 && ifShow == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifLeft == 1 && i >= 8 && i < 14 && j >= 4 && j < 20 && half_arrow[15 - i - 2][j - 4] == 1 && ifShow == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifTurnRight == 1 && you4zhuan3[i][j] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if((ifMoveForward == 1 || ifMoveBackward == 1) && j >= 9 && xiang4[i][j - 9] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifAttention == 1 && zhu4yi4[i][j] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifBrakeCenter == 1 && j >= 21 && sha1che1Compact[i][j - 21] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else {
-                    lineHTML = lineHTML + "<div class='off-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='off-yellow'></div>";
                 }
             } else if(j >= 24 && j < 48) {
                 if(ifTurnRight == 1 && j < 31 && you4zhuan3[i][j] == 1){
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifTurnLeft == 1 && j >= 41 && zuo3zhuan3[i][j - 41] == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifForward == 1 && j >= 30 && j < 36&& half_arrow[j - 30][i] == 1 && ifShow == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifForward == 1 && j >= 36 && j < 42 && half_arrow[41 - j][i] == 1 && ifShow == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifBackward == 1 && j >= 30 && j < 36 &&  half_arrow[j - 30][15 - i] == 1 && ifShow == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifBackward == 1 && j >= 36 && j < 42 &&  half_arrow[41 - j][15 - i] == 1 && ifShow == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifAttention == 1 && j < 31 && zhu4yi4[i][j] == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifBrakeRight == 1 && j >= 41 && sha1che1[i][j - 41] == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else if(ifBrakeCenter == 1 && sha1che1Compact[i][j - 21] == 1) {
-                    lineHTML = lineHTML + "<div class='on-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-red'></div>";
                 } else {
-                    lineHTML = lineHTML + "<div class='off-red'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='off-red'></div>";
                 }
             } else if(j >= 48 && j < 72) {
                 if(ifRight == 1 && ifShow == 1 && i >= 2 && i < 8 && j >= 52 && j < 68  && half_arrow[i - 2][71 - j - 4] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifRight == 1 && ifShow == 1 && i >= 8 && i < 14 && j >= 52 && j < 68  && half_arrow[15 - i - 2][71 - j - 4] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifTurnLeft == 1 && zuo3zhuan3[i][j - 41] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifMoveForward == 1 && j < 63 && qian2[i][j - 48] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifMoveBackward == 1 && j < 63 && hou4[i][j - 48] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifBrakeRight == 1 && sha1che1[i][j - 41] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else if(ifBrakeCenter == 1 && j < 51 && sha1che1Compact[i][j - 21] == 1) {
-                    lineHTML = lineHTML + "<div class='on-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='on-yellow'></div>";
                 } else {
-                    lineHTML = lineHTML + "<div class='off-yellow'></div>";
+                    tailHTMLLine = tailHTMLLine + "<div class='off-yellow'></div>";
                 }
             }
         }
-        tailHTML = tailHTML + "<div class='line'>" + lineHTML + "</div>";
+        tailHTML = tailHTML + "<div class='line'>" + tailHTMLLine + "</div>";
     }
     document.getElementById("tailOut").innerHTML = tailHTML;
     time = time + (timeRefresh / 1000);
