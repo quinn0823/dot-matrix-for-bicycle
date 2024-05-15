@@ -260,48 +260,48 @@ console.log("The page will refresh " + Math.ceil(timeReload * (1000 / timeRefres
 
 var ifShow = 0, time = 0;
 
-if(localStorage.ifLeft == undefined) {
-    localStorage.ifLeft = 0;
+if(sessionStorage.ifLeft == undefined) {
+    sessionStorage.ifLeft = 0;
 }
-var ifLeft = localStorage.ifLeft;
-if(localStorage.ifRight == undefined) {
-    localStorage.ifRight = 0;
+var ifLeft = sessionStorage.ifLeft;
+if(sessionStorage.ifRight == undefined) {
+    sessionStorage.ifRight = 0;
 }
-var ifRight = localStorage.ifRight;
-if(localStorage.ifForward == undefined) {
-    localStorage.ifForward = 0;
+var ifRight = sessionStorage.ifRight;
+if(sessionStorage.ifForward == undefined) {
+    sessionStorage.ifForward = 0;
 }
-var ifForward = localStorage.ifForward;
-if(localStorage.ifBackward == undefined) {
-    localStorage.ifBackward = 0;
+var ifForward = sessionStorage.ifForward;
+if(sessionStorage.ifBackward == undefined) {
+    sessionStorage.ifBackward = 0;
 }
-var ifBackward = localStorage.ifBackward;
-if(localStorage.ifTurnLeft == undefined) {
-    localStorage.ifTurnLeft = 0;
+var ifBackward = sessionStorage.ifBackward;
+if(sessionStorage.ifTurnLeft == undefined) {
+    sessionStorage.ifTurnLeft = 0;
 }
-var ifTurnLeft = localStorage.ifTurnLeft;
-if(localStorage.ifTurnRight == undefined) {
-    localStorage.ifTurnRight = 0;
+var ifTurnLeft = sessionStorage.ifTurnLeft;
+if(sessionStorage.ifTurnRight == undefined) {
+    sessionStorage.ifTurnRight = 0;
 }
-var ifTurnRight = localStorage.ifTurnRight;
-if(localStorage.ifMoveForward == undefined) {
-    localStorage.ifMoveForward = 0;
+var ifTurnRight = sessionStorage.ifTurnRight;
+if(sessionStorage.ifMoveForward == undefined) {
+    sessionStorage.ifMoveForward = 0;
 }
-var ifMoveForward = localStorage.ifMoveForward;
-if(localStorage.ifMoveBackward == undefined) {
-    localStorage.ifMoveBackward = 0;
+var ifMoveForward = sessionStorage.ifMoveForward;
+if(sessionStorage.ifMoveBackward == undefined) {
+    sessionStorage.ifMoveBackward = 0;
 }
-var ifMoveBackward = localStorage.ifMoveBackward;
+var ifMoveBackward = sessionStorage.ifMoveBackward;
 
 function turnShow() {
-    ifLeft = localStorage.ifLeft;
-    ifRight = localStorage.ifRight;
-    ifForward = localStorage.ifForward;
-    ifBackward = localStorage.ifBackward;
-    ifTurnLeft = localStorage.ifTurnLeft;
-    ifTurnRight = localStorage.ifTurnRight;
-    ifMoveForward = localStorage.ifMoveForward;
-    ifMoveBackward = localStorage.ifMoveBackward;
+    ifLeft = sessionStorage.ifLeft;
+    ifRight = sessionStorage.ifRight;
+    ifForward = sessionStorage.ifForward;
+    ifBackward = sessionStorage.ifBackward;
+    ifTurnLeft = sessionStorage.ifTurnLeft;
+    ifTurnRight = sessionStorage.ifTurnRight;
+    ifMoveForward = sessionStorage.ifMoveForward;
+    ifMoveBackward = sessionStorage.ifMoveBackward;
     // ifShow  = 0;
 }
 function turnHide() {
@@ -443,56 +443,56 @@ function setTurn(left, right, forward, backward, turnLeft, turnRight, moveForwar
     } else {
         ifLeft = 0;
     }
-    localStorage.ifLeft = ifLeft;
+    sessionStorage.ifLeft = ifLeft;
 
     if(right == 1) {
         ifRight = 1;
     } else {
         ifRight = 0;
     }
-    localStorage.ifRight = ifRight;
+    sessionStorage.ifRight = ifRight;
     
     if(forward == 1) {
         ifForward = 1;
     } else {
         ifForward = 0;
     }
-    localStorage.ifForward = ifForward;
+    sessionStorage.ifForward = ifForward;
 
     if(backward == 1) {
         ifBackward = 1;
     } else {
         ifBackward = 0;
     }
-    localStorage.ifBackward = ifBackward;
+    sessionStorage.ifBackward = ifBackward;
 
     if(turnLeft == 1) {
         ifTurnLeft = 1;
     } else {
         ifTurnLeft = 0;
     }
-    localStorage.ifTurnLeft = ifTurnLeft;
+    sessionStorage.ifTurnLeft = ifTurnLeft;
 
     if(turnRight == 1) {
         ifTurnRight = 1;
     } else {
         ifTurnRight = 0;
     }
-    localStorage.ifTurnRight = ifTurnRight;
+    sessionStorage.ifTurnRight = ifTurnRight;
 
     if(moveForward == 1) {
         ifMoveForward = 1;
     } else {
         ifMoveForward = 0;
     }
-    localStorage.ifMoveForward = ifMoveForward;
+    sessionStorage.ifMoveForward = ifMoveForward;
 
     if(moveBackward == 1) {
         ifMoveBackward = 1;
     } else {
         ifMoveBackward = 0;
     }
-    localStorage.ifMoveBackward = ifMoveBackward;
+    sessionStorage.ifMoveBackward = ifMoveBackward;
 
     // ifShow = 0;
 }
