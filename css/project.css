@@ -4,12 +4,12 @@
 
 /* body {
     background-color: #333;
-}
-input {
+} */
+/* input {
     color: #fff;
     background-color: #333;
-}
-span {
+} */
+/* span {
     color: #fff;
 } */
 
@@ -17,8 +17,11 @@ button {
     /* margin-top: 5px; */
     padding-left: 10.5px;
     padding-right: 10.5px;
-    height: 27px;
-    border-radius: 13.5px;
+    height: 34px;
+    padding: 6px;
+    line-height: 16px;
+    border-radius: 9px;
+    transition: 0.25s;
     /* background-color: #333; */
 }
 /* button:hover {
@@ -29,15 +32,16 @@ button {
 }
 
 .screen-out {
-    width: calc(100% - 18px - 6px);
-    padding: 6px;
-    border-radius: 18px;
+    width: calc(100% - 6px - 3px);
+    padding: 1.5px;
+    border-radius: 9px;
     background-color: #000;
-    border: #333 6px solid;
+    border: #333 3px solid;
+    /* border: initial; */
 }
 .screen-in {
     width: 100%;
-    border-radius: 6px;
+    border-radius: 4.5px;
     overflow: hidden;
 }
 .output {
@@ -46,15 +50,15 @@ button {
     overflow-y: hidden;
 }
 .output .line {
-    margin-top: 8px;
-    height: 12px;
+    margin-top: 3px;
+    height: 9px;
     white-space: nowrap;
     font-size: 0;
 }
 .output .line div {
-    margin-left: 8px;
-    width: 12px;
-    height: 12px;
+    margin-left: 3px;
+    width: 9px;
+    height: 9px;
     border-radius: 50%;
     display: inline-block;
     /* box-sizing: border-box; */
@@ -80,4 +84,59 @@ button {
 }
 .line .on-yellow {
     background-color: #ffff00;
+}
+
+
+input.with-button {
+    /* position: relative; */
+    padding: 6px;
+    margin-bottom: 5px;
+    width: calc(100% - 39px);
+    height: 34px;
+    border-radius: 9px;
+    border: #6699cc 3px solid;
+}
+button.clear-button {
+    position: absolute;
+    margin-top: 0;
+    margin-left: 5px;
+    padding: 0;
+    border-radius: 7px;
+    width: 34px;
+    height: 34px;
+}
+button.clear-button .cross{
+    width: 28px;
+    height: 28px;
+}
+button.clear-button .cross .lr,
+button.clear-button .cross .rl {
+    position: absolute;
+    margin-left: 12.5px;
+    margin-top: 3px;
+    height: 22px;
+    width: 3px;
+    border-radius: 1.5px;
+    background-color: #6699cc;
+    transform-origin: center;
+    transition: 0.5s;
+}
+button.clear-button .cross .lr{
+    transform: rotate(-45deg);
+}
+button.clear-button .cross .rl{
+    transform: rotate(45deg);
+}
+button.clear-button:hover  .cross .lr,
+button.clear-button:hover  .cross .rl {
+    /* background-color: #333; */
+    background-color: #fff;
+    margin-top: 0px;
+    height: 28px;
+}
+button.clear-button:hover  .cross .lr{
+    transform: rotate(-135deg);
+}
+button.clear-button:hover  .cross .rl{
+    transform: rotate(135deg);
 }
