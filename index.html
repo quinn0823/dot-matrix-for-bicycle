@@ -17,20 +17,20 @@
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://quinn0823.github.io/images/icons/icon-32.png">
 
-    <base href="/dot-matrix-for-bicycle/">
-    <!-- <base href="/"> -->
+    <!-- <base href="/dot-matrix-for-bicycle/"> -->
+    <base href="/">
     
     <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/icon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/icon-32.png">
     <link rel="icon" type="image/png" sizes="64x64" href="/images/icons/icon-64.png">
     <link rel="icon" type="image/png" sizes="128x128" href="/images/icons/icon-128.png">
 
-    <link rel="stylesheet" type="text/css" href="/projects/css/page.css">
-    <!-- <link rel="stylesheet" type="text/css" href="https://quinn0823.github.io/projects/css/page.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="/projects/css/page.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://quinn0823.github.io/projects/css/page.css">
     <link rel="stylesheet" type="text/css" href="css/project.css">
     
-    <script src="/js/font_awesome.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://quinn0823.github.io/js/font_awesome.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="/js/font_awesome.js" crossorigin="anonymous"></script> -->
+    <script src="https://quinn0823.github.io/js/font_awesome.js" crossorigin="anonymous"></script>
     
     <title>Dot Matrix For Bicycle</title>
 </head>
@@ -41,8 +41,8 @@
     <button id="leftBut" onclick="setTurn(1,0,0,0,1,0,0,0);">Left</button>
     <button id="rightBut" onclick="setTurn(0,1,0,0,0,1,0,0);">Right</button>
     <button id="rightBut" onclick="setTurn(1,1,0,0,0,0,0,0);">Left & Right</button>
-    <button id="rightBut" onclick="setTurn(0,0,1,0,0,0,1,0);">Forward</button>
-    <button id="rightBut" onclick="setTurn(0,0,0,1,0,0,0,1);">Backward</button>
+    <!-- <button id="rightBut" onclick="setTurn(0,0,1,0,0,0,1,0);">Forward</button>
+    <button id="rightBut" onclick="setTurn(0,0,0,1,0,0,0,1);">Backward</button> -->
     <button id="rightBut" onclick="setTurn(0,0,0,0,0,0,0,0);">Clear</button>
     <br>
     <span>Brake (Hold):</span>
@@ -50,7 +50,18 @@
     <button id="brakeOldBut">Brake (Old)</button>
     <!-- <hr>
     <h3>Dashboard</h3>
-    <div id="dashOut" class="output"></div> -->
+    <div class="screen-out">
+        <div class="screen-in">
+            <div id="dashOut" class="output"></div>
+        </div>
+    </div> -->
+    <!-- <hr>
+    <h3>Headlight</h3>
+    <div class="screen-out">
+        <div class="screen-in">
+            <div id="headOut" class="output"></div>
+        </div>
+    </div> -->
     <hr>
     <h3>Taillight</h3>
     <div class="screen-out">
@@ -58,12 +69,26 @@
             <div id="tailOut" class="output"></div>
         </div>
     </div>
+    <hr>
+    <h3>Taillight (V2)</h3>
+    <input id="tail_v2Input" class="with-button"  maxlength="3" oninput="tail_v2Input();">
+    <button id="tail_v2Clear" class="clear-button" onclick="tail_v2Clear();">
+        <div class="cross">
+            <div class="lr"></div>
+            <div class="rl"></div>
+        </div>
+    </button>
+    <div class="screen-out">
+        <div class="screen-in">
+            <div id="tailOut_v2" class="output"></div>
+        </div>
+    </div>
     <div id="footer">
-        <div id="update">May 15, 2024</div>
+        <div id="update">Jun. 8, 2024</div>
         <div id="year">2024</div>
         <div id="people">Quinn Qiu</div>
     </div>
-    <script src="/projects/js/page.js"></script>
-    <!-- <script src="https://quinn0823.github.io/projects/js/page.js"></script> -->
+    <!-- <script src="/projects/js/page.js"></script> -->
+    <script src="https://quinn0823.github.io/projects/js/page.js"></script>
     <script src="js/project.js"></script>
 </body>
