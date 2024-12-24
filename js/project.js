@@ -506,7 +506,7 @@ function turnShow() {
     // ifShow = 0;
 }
 function turnHide() {
-    新刹车隐藏左右上下箭头 || 旧刹车隐藏左右上下箭头
+    // 新刹车隐藏左右上下箭头 || 旧刹车隐藏左右上下箭头
     if((ifAttention == 1 && ((ifLeft == 1 || ifRight == 1) || (ifForward == 1 || ifBackward == 1))) || (ifBrakeCenter == 1 && ((ifLeft == 1 || ifRight == 1) || (ifForward == 1 || ifBackward == 1)))) {
         ifLeft = 0;
         ifRight = 0;
